@@ -8,20 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		B368ED59219810590046CB10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B368ED58219810590046CB10 /* AppDelegate.swift */; };
-		B368ED5B219810590046CB10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B368ED5A219810590046CB10 /* ViewController.swift */; };
 		B368ED5E219810590046CB10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B368ED5C219810590046CB10 /* Main.storyboard */; };
 		B368ED602198105C0046CB10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B368ED5F2198105C0046CB10 /* Assets.xcassets */; };
 		B368ED632198105C0046CB10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B368ED612198105C0046CB10 /* LaunchScreen.storyboard */; };
+		B368ED6B219810E00046CB10 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B368ED6A219810E00046CB10 /* CalendarViewController.swift */; };
+		B368ED6D219815880046CB10 /* PinterestSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B368ED6C219815880046CB10 /* PinterestSegment.swift */; };
+		B368ED6F21981B530046CB10 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B368ED6E21981B530046CB10 /* CalendarCell.swift */; };
+		B368ED7121981BD40046CB10 /* DayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B368ED7021981BD40046CB10 /* DayCell.xib */; };
+		B368ED74219829590046CB10 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B368ED72219829590046CB10 /* DataModel.xcdatamodeld */; };
+		B368ED76219829700046CB10 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B368ED75219829700046CB10 /* CoreDataStack.swift */; };
+		B368ED7821982A4B0046CB10 /* Calendar + Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B368ED7721982A4B0046CB10 /* Calendar + Convenience.swift */; };
+		B368ED7A21982ADB0046CB10 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B368ED7921982ADB0046CB10 /* CalendarController.swift */; };
+		B368ED7C21982B410046CB10 /* Months.swift in Sources */ = {isa = PBXBuildFile; fileRef = B368ED7B21982B410046CB10 /* Months.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B368ED55219810590046CB10 /* TapCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B368ED58219810590046CB10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B368ED5A219810590046CB10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B368ED5D219810590046CB10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B368ED5F2198105C0046CB10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B368ED622198105C0046CB10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B368ED642198105C0046CB10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B368ED6A219810E00046CB10 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		B368ED6C219815880046CB10 /* PinterestSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestSegment.swift; sourceTree = "<group>"; };
+		B368ED6E21981B530046CB10 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		B368ED7021981BD40046CB10 /* DayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayCell.xib; sourceTree = "<group>"; };
+		B368ED73219829590046CB10 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		B368ED75219829700046CB10 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		B368ED7721982A4B0046CB10 /* Calendar + Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar + Convenience.swift"; sourceTree = "<group>"; };
+		B368ED7921982ADB0046CB10 /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
+		B368ED7B21982B410046CB10 /* Months.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Months.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +70,17 @@
 		B368ED57219810590046CB10 /* TapCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				B368ED72219829590046CB10 /* DataModel.xcdatamodeld */,
+				B368ED75219829700046CB10 /* CoreDataStack.swift */,
+				B368ED7721982A4B0046CB10 /* Calendar + Convenience.swift */,
+				B368ED7921982ADB0046CB10 /* CalendarController.swift */,
+				B368ED7B21982B410046CB10 /* Months.swift */,
 				B368ED58219810590046CB10 /* AppDelegate.swift */,
-				B368ED5A219810590046CB10 /* ViewController.swift */,
 				B368ED5C219810590046CB10 /* Main.storyboard */,
+				B368ED7021981BD40046CB10 /* DayCell.xib */,
+				B368ED6A219810E00046CB10 /* CalendarViewController.swift */,
+				B368ED6E21981B530046CB10 /* CalendarCell.swift */,
+				B368ED6C219815880046CB10 /* PinterestSegment.swift */,
 				B368ED5F2198105C0046CB10 /* Assets.xcassets */,
 				B368ED612198105C0046CB10 /* LaunchScreen.storyboard */,
 				B368ED642198105C0046CB10 /* Info.plist */,
@@ -124,6 +148,7 @@
 			files = (
 				B368ED632198105C0046CB10 /* LaunchScreen.storyboard in Resources */,
 				B368ED602198105C0046CB10 /* Assets.xcassets in Resources */,
+				B368ED7121981BD40046CB10 /* DayCell.xib in Resources */,
 				B368ED5E219810590046CB10 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +160,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B368ED5B219810590046CB10 /* ViewController.swift in Sources */,
+				B368ED6B219810E00046CB10 /* CalendarViewController.swift in Sources */,
+				B368ED7A21982ADB0046CB10 /* CalendarController.swift in Sources */,
+				B368ED74219829590046CB10 /* DataModel.xcdatamodeld in Sources */,
+				B368ED6D219815880046CB10 /* PinterestSegment.swift in Sources */,
+				B368ED7821982A4B0046CB10 /* Calendar + Convenience.swift in Sources */,
+				B368ED76219829700046CB10 /* CoreDataStack.swift in Sources */,
 				B368ED59219810590046CB10 /* AppDelegate.swift in Sources */,
+				B368ED7C21982B410046CB10 /* Months.swift in Sources */,
+				B368ED6F21981B530046CB10 /* CalendarCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +366,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B368ED72219829590046CB10 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B368ED73219829590046CB10 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = B368ED73219829590046CB10 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B368ED4D219810590046CB10 /* Project object */;
 }
