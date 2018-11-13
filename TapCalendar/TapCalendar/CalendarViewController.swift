@@ -32,7 +32,7 @@ class CalendarViewController: UIViewController {
         
 //        sender.selectIndex
         CalendarController.shared.daysPerMonth(index: sender.selectIndex)
-        let day = Day()
+        let day = Day(isCompleted: false)
         CalendarController.shared.addDays(day: day)
         calCollectionView.reloadData()
     }
@@ -108,11 +108,6 @@ extension CalendarViewController: UICollectionViewDelegate, UICollectionViewData
 extension CalendarViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        /*
-         let width = (view.frame.width - 20) / 3
-         let height = (view.frame.height - 20) / 4
-         return CGSize(width: width, height: height)
-         */
         
         let width = (view.frame.width - 50) / 4
         return CGSize(width: width, height: width)
@@ -130,42 +125,14 @@ extension CalendarViewController: UICollectionViewDelegateFlowLayout {
         let insets:CGFloat = 5
         return UIEdgeInsets(top: 0, left: insets, bottom: insets, right: insets)
     }
-    
 }
 
 extension CalendarViewController: CalendarCellDelegate {
     
     func changeTappedCell(cell: CalendarCell) {
-        
-        let selectedCell = calCollectionView.indexPath(for: cell)
-        
-        
-        cell.day?.isCompleted = true
-
-        
+        guard let indexPath = calCollectionView.indexPath(for: cell) else { return }
+        let day = CalendarController.shared.days[indexPath.row]
+        CalendarController.shared.toggleOnOff(day: day)
+        print(day.isCompleted)
     }
-    
-    
-    
-    
 }
-
-//extension CalendarViewController: UIScrollViewDelegate {
-//    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-//        let layout = self.calCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-//        let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing
-//        
-//        var offSet = targetContentOffset.pointee
-//        let index = (offSet.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
-//        let roundedIndex = round(index)
-//        
-//        offSet = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left, y: -scrollView.contentInset.top)
-//        targetContentOffset.pointee = offSet
-//        
-//        let castedIndex = Int(roundedIndex)
-//        print(castedIndex)
-//        let indexTest = IndexPath(item: castedIndex, section: 0)
-////        selectedIndexPath = indexTest
-//        self.calCollectionView.selectItem(at: indexTest, animated: true, scrollPosition: .centeredHorizontally)
-//    }
-//}

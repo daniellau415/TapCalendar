@@ -16,7 +16,6 @@ class CalendarController {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     
     var days = [Day]()
-    
     var numberOfDays : Int?
     
     func daysPerMonth(index: Int) {
@@ -40,7 +39,16 @@ class CalendarController {
             days.append(day)
         }
         print(days.count)
-        
+    }
+    
+    func toggleOnOff(day: Day) {
+        if day.isCompleted == false {
+            day.isCompleted = true
+            print("Set to true")
+        } else {
+            day.isCompleted = false
+            print("Set to false")
+        }
     }
     
 }

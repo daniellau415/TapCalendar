@@ -24,13 +24,14 @@ class CalendarCell: UICollectionViewCell {
     }
     
     weak var delegate : CalendarCellDelegate?
+    var isComplete : Bool? 
     
     @IBAction func cellTapped(_ sender: Any) {
         delegate?.changeTappedCell(cell: self)
     }
     
     func updateViews() {
-        if day?.isCompleted == true {
+        if isComplete == true {
             cellView.backgroundColor = .yellow
         } else {
             cellView.backgroundColor = .lightGray
